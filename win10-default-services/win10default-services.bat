@@ -21,7 +21,7 @@ FOR %%A IN (%services_demand%) DO <NUL SET /P=%%A &sc config %%A start= demand
 FOR %%A IN (%services_disabled%) DO <NUL SET /P=%%A &sc config %%A start= disabled
 
 GOTO :_DONE_
-rem comment above line to also reset default device drivers
+:: rem comment above line to also reset default device drivers
 
 SET "drivers_auto= lltdio luafv MMCSS mrxsmb10 MsLldp Ndu PEAUTH rspndr srv storqosflt tcpipreg "
 SET "drivers_boot= ACPI acpiex atapi CLFS CNG disk EhStorClass FileInfo FltMgr fvevol hwpolicy intelide KSecDD KSecPkg mountmgr msisadrv Mup NDIS partmgr pci pcw pdc rdyboost spaceport Tcpip vdrvroot volmgr volmgrx volsnap Wdf01000 WFPLWFS WindowsTrustedRT WindowsTrustedRTProxy Wof "
